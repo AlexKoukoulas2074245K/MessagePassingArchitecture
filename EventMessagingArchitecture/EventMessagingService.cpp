@@ -25,7 +25,7 @@ void EventMessagingService::UnregisterListenerFromAllEvents(const EventListener&
 {
     for (auto pair: _listeners)
     {
-        pair.second.erase(&eventListener);
+        UnregisterListener(pair.first, eventListener);
     }    
 }
 
